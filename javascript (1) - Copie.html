@@ -1,0 +1,80 @@
+<html>
+    <head> 
+      
+<script langage="javascript">
+        
+ function calcul(valeur){
+                           
+   // document.cal.zt.value=valeur;
+                            
+   document.getElementById("zt").value+=valeur;
+                               }
+        
+       
+ function calcul2(valeur){
+                                   
+//document.cal.zt.value=valeur;
+                                 
+ document.getElementById("zt").value=Math.sqrt(document.getElementById("zt").value);
+                                 }
+ 
+       function calcul3(valeur){
+                                 
+ y=document.cal.zt.value;
+                                 
+ document.getElementById("zt").value=eval(y);
+                                
+ }
+     </script>
+     
+ </head>
+         <body>
+           
+   <h1> calculatrice </h1>
+         
+
+   <form name="cal">
+                  
+                 
+ <input type="text" id="zt" name="zt" size=12 value=""/><br>
+                  
+ <input type="button" id="b1" name="b1" size=1 value="1" onClick="calcul(1);"/>
+                  
+ <input type="button" id="b2" name="b2" size=1 value="2" onClick="calcul(2);"/>
+                   
+<input type="button" id="b3" name="b3" size=1 value="3" onClick="calcul(3);"/>
+          
+         <input type="button" id="b+" name="b+" size=1 value="+" onClick="calcul('+');"/><br>
+ 
+                  <input type="button" id="b4" name="b4" size=1 value="4" onClick="calcul(4);"/>
+    
+               <input type="button" id="b5" name="b5" size=1 value="5" onClick="calcul(5);"/>
+                   
+<input type="button" id="b6" name="b6" size=1 value="6" onClick="calcul(6);"/>
+                   
+<input type="button" id="b-" name="b-" size=1 value="-" onClick="calcul('-');" /><br>
+                   
+<input type="button" id="b7" name="b7" size=1 value="7" onClick="calcul(7);"/>
+                   
+<input type="button" id="b8" name="b8" size=1 value="8" onClick="calcul(8);"/>
+                  
+ <input type="button" id="b9" name="b9" size=1 value="9" onClick="calcul(9);"/>
+                   
+<input type="button" id="b*" name="b*" size=1 value="*" onClick="calcul('*');"/><br>
+                  
+ <input type="button" id="b." name="b." size=1 value="." onClick="calcul('.');"/>
+                   
+<input type="button" id="b0" name="b0" size=1 value="0" onClick="calcul(0);" />
+                   
+<input type="button" id="b/" name="b/" size=1 value="/" onClick="calcul('/');"/>
+                   
+<input type="button" id="bsqrt" name="bsqrt" size=1 value="sqrt" onClick="calcul2();" /><br>
+                  
+<input type="button" id="bc" name="bc" size=1 value="c" onClick="document.getElementById('zt').value='';"/>
+               
+<input type="button" id="bcalcul" name="bcalcul" size=2 value="calculer" onClick="calcul3('document.cal.zt.value');"/>
+            
+</form>
+      
+        </body>
+</html>
